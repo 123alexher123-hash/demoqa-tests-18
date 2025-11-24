@@ -24,9 +24,8 @@ public class TextBoxTests {
 
     $("#name").shouldHave(text("Alexandr Yakovlev"));
     $("#email").shouldHave(text("a.yakovlev@aqsi.ru"));
-    //$("#currentAddress").shouldHave(text("first"));
+    $("#output").$("#currentAddress").shouldHave(text("first"));
+    $("#output").$("#permanentAddress").shouldHave(text("second"));
     //$("#permanentAddress").shouldHave(text("second"));
-
-    //$("#output").shouldHave(text("Alexandr Yakovlev"), text("a.yakovlev@aqsi.ru"), text("firstAdress"),  text("secondAdress"));
             }
 }
