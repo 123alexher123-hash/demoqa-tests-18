@@ -15,6 +15,7 @@ public class PracticeFormTests {
         $("#lastName").setValue("Yakovlev");
         $("#userEmail").setValue("a.yakovlev@aqsi.ru");
 
+        $("label[for='gender-radio-1']").scrollIntoView(true);
         $("label[for='gender-radio-1']").click();
 
         $("#userNumber").setValue("79186846355");
@@ -23,11 +24,21 @@ public class PracticeFormTests {
 
         $(".react-datepicker__year-select").selectOption("1998");
         $(".react-datepicker__month-select").selectOption("August");
+        $(".react-datepicker__day--008:not(.react-datepicker__day--outside-month)").click();
 
-        $("#currentAddress").scrollIntoView(true);
+        $("#subjectsContainer").scrollIntoView(true);
+        $("#subjectsInput").setValue("Maths").pressEnter();
+
+        $("label[for='hobbies-checkbox-1']").click();
+
+        $("#uploadPicture").uploadFromClasspath("morning.jpg");
+
         $("#currentAddress").setValue("currentAddress");
 
         $("#state").click();
+
+        $("#city").click();
+
 
 
     }
