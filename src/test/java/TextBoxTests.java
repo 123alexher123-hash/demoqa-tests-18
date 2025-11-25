@@ -11,7 +11,7 @@ public class TextBoxTests {
 
     open("https://demoqa.com/text-box");
 
-    $("#userName").setValue("Alexandr Yakovlev");
+    $("#userName").setValue("Alex");
     $("#userEmail").setValue("a.yakovlev@aqsi.ru");
     $("#currentAddress").setValue("first");
     $("#permanentAddress").setValue("second");
@@ -22,10 +22,9 @@ public class TextBoxTests {
 
     $("#output").scrollIntoView(true);
 
-    $("#name").shouldHave(text("Alexandr Yakovlev"));
+    $("#name").shouldHave(text("Alex"));
     $("#email").shouldHave(text("a.yakovlev@aqsi.ru"));
     $("#output").$("#currentAddress").shouldHave(text("first"));
     $("#output").$("#permanentAddress").shouldHave(text("second"));
-    //$("#permanentAddress").shouldHave(text("second"));
             }
 }
